@@ -25,8 +25,10 @@ public class Usuario {
 	private String email;
 	
 	@NotNull
-	@Size(min = 6, max = 20)
+	@Size(min = 6)
 	private String senha;
+	
+	private String tipoUsuario;
 
 	public long getId() {
 		return id;
@@ -59,5 +61,15 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
+	
+	
 
 }

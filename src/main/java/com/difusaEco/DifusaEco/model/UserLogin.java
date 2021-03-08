@@ -2,7 +2,7 @@ package com.difusaEco.DifusaEco.model;
 
 public class UserLogin {
 	
-	private String nome;
+	private String nomeUsuario;
 	
 	private String usuario;
 	
@@ -12,13 +12,14 @@ public class UserLogin {
 	
 	private String tipoUsuario;
 
-	public String getNome() {
-		return nome;
+	public String getNomeUsuario() {
+		return nomeUsuario;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeUsuario(String nomeUsuario) {
+		this.nomeUsuario = nomeUsuario;
 	}
+
 
 	public String getUsuario() {
 		return usuario;
@@ -35,7 +36,7 @@ public class UserLogin {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
+
 	public String getToken() {
 		return token;
 	}

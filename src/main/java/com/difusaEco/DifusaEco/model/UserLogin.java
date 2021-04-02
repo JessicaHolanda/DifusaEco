@@ -2,9 +2,11 @@ package com.difusaEco.DifusaEco.model;
 
 public class UserLogin {
 	
+	private long id;
+	
 	private String nomeUsuario;
 	
-	private String usuario;
+	private String email;
 	
 	private String senha;
 	
@@ -21,12 +23,21 @@ public class UserLogin {
 	}
 
 
-	public String getUsuario() {
-		return usuario;
+
+	public long getId() {
+		return id;
 	}
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getSenha() {

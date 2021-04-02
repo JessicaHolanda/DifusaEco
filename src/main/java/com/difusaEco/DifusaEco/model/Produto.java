@@ -27,6 +27,8 @@ public class Produto {
 	@Size(min = 10, max = 300)
 	private String descricao;
 	
+	private String imagem;
+	
 	@NotNull
 	private int quantidade;
 	
@@ -83,6 +85,16 @@ public class Produto {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}	
 
+	
+	
 }

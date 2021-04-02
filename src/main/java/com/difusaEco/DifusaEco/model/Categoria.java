@@ -26,13 +26,10 @@ public class Categoria
 	@Size(min = 2, max = 50)
 	private String nomeCategoria;
 	
-	@NotNull
-	@Size(min = 2, max = 50)
-	private String subCategoria;
 	
 	private boolean ativo;
 	
-	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
 	private List<Produto> produto;
 
@@ -50,14 +47,6 @@ public class Categoria
 
 	public void setNomeCategoria(String nomeCategoria) {
 		this.nomeCategoria = nomeCategoria;
-	}
-
-	public String getSubCategoria() {
-		return subCategoria;
-	}
-
-	public void setSubCategoria(String subCategoria) {
-		this.subCategoria = subCategoria;
 	}
 
 	public boolean isAtivo() {

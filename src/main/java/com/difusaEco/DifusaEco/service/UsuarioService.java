@@ -50,13 +50,25 @@ public class UsuarioService {
 				user.get().setSenha(usuario.get().getSenha());
 				user.get().setTipoUsuario(usuario.get().getTipoUsuario());
 				
-				return user;
-				
+				return user;	
 			}
 		}
-		
-		
 		return null;
 	}
- 	
+	
+	public Optional<Usuario> EditarUsuario (Usuario usuario){
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		
+		String senhaEncoder = encoder.encode(usuario.getSenha());
+		usuario.setSenha(senhaEncoder);
+		
+		return Optional.of(repository.save(usuario));
+	}
+	
+	public void ApagarUsuario(Long id) {
+		if (repository.findById(id).isPresent()) {
+			repository.deleteById(id);
+		}
+	}
+		
 }

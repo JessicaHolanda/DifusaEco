@@ -42,6 +42,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter{
 		.antMatchers("/produto").permitAll()
 		.antMatchers("/categoria").permitAll()
 		.antMatchers("/produto/produto/{nomeProduto}").permitAll()
+		.antMatchers("/categoria/categoria/{nomeCategoria}").permitAll()
 		.anyRequest().authenticated()
 		.and().httpBasic()
 		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
